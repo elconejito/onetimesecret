@@ -1,8 +1,4 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
   <meta charset="utf-8">
   <meta name="referrer" content="no-referrer">
@@ -73,12 +69,7 @@
     .marketing {
       margin: 20px 0;
     }
-    #logo {
-      background-image: url('/img/logo-48.png');
-      display: inline-block;
-      width: 48px;
-      height: 48px;
-    }
+    
     @media (min-width: 481px) {
       #contentTab {
         margin-top: 20px;
@@ -88,12 +79,6 @@
     @media (max-width: 480px) {
       body {
 
-      }
-      #logo {
-        background-image: url('/img/logo-36.png');
-        display: inline-block;
-        width: 36px;
-        height: 36px;
       }
       .masthead .nav {
         margin-top: 18px;
@@ -130,16 +115,6 @@
 <div class="container-narrow">
 
   <div class="masthead">
-    <div class="nav pull-right">
-    {{#display_masthead}}
-
-
-      {{^is_default_locale}}
-      | <a href="?locale={{i18n.default}}" title="View site in {{i18n.default}}">{{i18n.default}}</a>
-      {{/is_default_locale}}
-
-    {{/display_masthead}}
-
-    </div>
-    <a href="/"><h3 id="logo"></h3></a>
+    <div class="nav pull-right"></div>
+    <a href="/">Cstraight Media</a>
   </div>
