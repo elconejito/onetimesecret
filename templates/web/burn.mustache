@@ -26,9 +26,9 @@
     <form method="POST">
       {{{add_shrimp}}}
       <input type="hidden" name="continue" value="true" />
-      <div class="control-group passphrase">
+      <div class="form-group passphrase">
         {{#has_passphrase}}
-          <input type="password" name="passphrase" id="passField" class="input-large" value="" placeholder="Enter the passphrase here" />
+          <input type="password" name="passphrase" id="passField" class="form-control" value="" placeholder="Enter the passphrase here" />
         {{/has_passphrase}}
       </div>
       <button class="btn btn-block btn-large btn-warning cufon" type="submit"><i class="icon-fire"></i> {{i18n.COMMON.word_confirm}}: {{i18n.COMMON.burn_this_secret}}</button>
