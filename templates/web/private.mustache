@@ -3,9 +3,9 @@
   <div class="private">
 
     {{#show_secret_link}}
-    <div class="uri">
-      <span class="pretext">{{i18n.page.pretext}}</span><br/>
-      <input id="secreturi" class="selectable" value="{{share_uri}}" readonly="readonly" />
+    <div class="uri mb-3">
+      <p class="pretext">{{i18n.page.pretext}}</p>
+      <input id="secreturi" class="selectable form-control" value="{{share_uri}}" readonly="readonly" />
       {{#has_passphrase}}
       <p><strong>{{i18n.page.requires_passphrase}}</strong></p>
       {{/has_passphrase}}
@@ -22,7 +22,7 @@
     <div class="secret">
       {{^can_decrypt}}
       <em>{{i18n.COMMON.secret}} ({{secret_shortkey}}):</em><br/>
-      <input class="selectable" id="displayedsecret" value="{{i18n.page.this_msg_is_encrypted}}" />
+      <input class="selectable form-control" id="displayedsecret" value="{{i18n.page.this_msg_is_encrypted}}" />
       {{/can_decrypt}}
       {{#can_decrypt}}
 
@@ -35,7 +35,7 @@
       {{/truncated}}
 
       <em>{{i18n.COMMON.secret}} ({{secret_shortkey}}):</em> <span class="smaller lighter">({{i18n.page.only_see_once}})</span><br/>
-      <textarea class="input-block-level" readonly="readonly" rows="{{display_lines}}">{{secret_value}}</textarea>
+      <textarea class="form-control" readonly="readonly" rows="{{display_lines}}">{{secret_value}}</textarea>
 
       {{/can_decrypt}}
     </div>
@@ -67,14 +67,14 @@
 
     <hr/>
     {{^is_destroyed}}
-    <a class="btn btn-block btn-large" href="{{burn_uri}}"><i class="icon-fire"></i> {{i18n.COMMON.burn_this_secret}}*</a>
+    <a class="btn btn-secondary btn-block btn-large" href="{{burn_uri}}"><i class="icon-fire"></i> {{i18n.COMMON.burn_this_secret}}*</a>
 
     <hr/>
     <p class="hint">* {{i18n.COMMON.burn_this_secret_hint}}.</p>
     {{/is_destroyed}}
 
     <hr/>
-    <p class=""><a class="btn btn-block btn-large btn-custom" href="/">Create another secret</a></p>
+    <p class=""><a class="btn btn-primary btn-block btn-large btn-custom" href="/">Create another secret</a></p>
 
     {{#show_metadata_link}}
     <!--
