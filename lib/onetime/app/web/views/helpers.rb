@@ -41,11 +41,12 @@ module Onetime
         end
         def baseuri
           scheme = Onetime.conf[:site][:ssl] ? 'https://' : 'http://'
-          if current_subdomain
-            fulldomain = [current_subdomain['cname'], Onetime.conf[:site][:domain]].join('.')
-          else
-            fulldomain = Onetime.conf[:site][:host]
-          end
+          fulldomain = Onetime.conf[:site][:host]
+          # if current_subdomain
+          #   fulldomain = [current_subdomain['cname'], Onetime.conf[:site][:domain]].join('.')
+          # else
+          #   fulldomain = Onetime.conf[:site][:host]
+          # end
           uri = [scheme, fulldomain].join
           #uri << (':%d' % server_port) if ![443, 80].member?(server_port.to_i)
           uri
